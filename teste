@@ -1,0 +1,4234 @@
+	class => KEYWORD
+
+	VarList => TYPE ID
+
+	inherits => KEYWORD
+
+	IO => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	isNil => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	Bool => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	true => KEYWORD
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	head => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	Variable => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	{ => SPECIAL NOTATION
+
+	abort => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	new => KEYWORD
+
+	Variable => TYPE ID
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	tail => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	VarList => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	{ => SPECIAL NOTATION
+
+	abort => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	new => KEYWORD
+
+	VarList => TYPE ID
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	add => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	x => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Variable => TYPE ID
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	VarList => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	( => SPECIAL NOTATION
+
+	new => KEYWORD
+
+	VarListNE => TYPE ID
+
+	) => SPECIAL NOTATION
+
+	. => SPECIAL NOTATION
+
+	init => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	x, => OBJECT ID
+
+	self => OBJECT ID
+
+	) => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	print => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	SELF_TYPE => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	VarListNE => TYPE ID
+
+	inherits => KEYWORD
+
+	VarList => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	x => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Variable => TYPE ID
+
+	; => SPECIAL NOTATION
+
+	rest => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	VarList => TYPE ID
+
+	; => SPECIAL NOTATION
+
+	isNil => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	Bool => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	false => KEYWORD
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	head => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	Variable => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	x => OBJECT ID
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	tail => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	VarList => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	rest => OBJECT ID
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	init => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	y => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Variable, => TYPE ID
+
+	r => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	VarList => TYPE ID
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	VarListNE => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	{ => SPECIAL NOTATION
+
+	x => OBJECT ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	y => OBJECT ID
+
+	; => SPECIAL NOTATION
+
+	rest => OBJECT ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	r => OBJECT ID
+
+	; => SPECIAL NOTATION
+
+	self => OBJECT ID
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	print => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	SELF_TYPE => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	{ => SPECIAL NOTATION
+
+	x => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	print_self => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	" " => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	rest => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	print => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	self => OBJECT ID
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	LambdaList => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	isNil => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	Bool => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	true => KEYWORD
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	headE => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	VarList => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	{ => SPECIAL NOTATION
+
+	abort => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	new => KEYWORD
+
+	VarList => TYPE ID
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	headC => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	Lambda => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	{ => SPECIAL NOTATION
+
+	abort => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	new => KEYWORD
+
+	Lambda => TYPE ID
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	headN => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	Int => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	{ => SPECIAL NOTATION
+
+	abort => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	0 => INTEGER
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	tail => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	LambdaList => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	{ => SPECIAL NOTATION
+
+	abort => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	new => KEYWORD
+
+	LambdaList => TYPE ID
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	add => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	e => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	VarList, => TYPE ID
+
+	x => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Lambda, => TYPE ID
+
+	n => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Int => TYPE ID
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	LambdaList => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	( => SPECIAL NOTATION
+
+	new => KEYWORD
+
+	LambdaListNE => TYPE ID
+
+	) => SPECIAL NOTATION
+
+	. => SPECIAL NOTATION
+
+	init => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	e, => OBJECT ID
+
+	x, => OBJECT ID
+
+	n, => OBJECT ID
+
+	self => OBJECT ID
+
+	) => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	LambdaListNE => TYPE ID
+
+	inherits => KEYWORD
+
+	LambdaList => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	lam => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Lambda => TYPE ID
+
+	; => SPECIAL NOTATION
+
+	num => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Int => TYPE ID
+
+	; => SPECIAL NOTATION
+
+	env => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	VarList => TYPE ID
+
+	; => SPECIAL NOTATION
+
+	rest => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	LambdaList => TYPE ID
+
+	; => SPECIAL NOTATION
+
+	isNil => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	Bool => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	false => KEYWORD
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	headE => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	VarList => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	env => OBJECT ID
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	headC => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	Lambda => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	lam => OBJECT ID
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	headN => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	Int => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	num => OBJECT ID
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	tail => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	LambdaList => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	rest => OBJECT ID
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	init => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	e => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	VarList, => TYPE ID
+
+	l => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Lambda, => TYPE ID
+
+	n => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Int, => TYPE ID
+
+	r => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	LambdaList => TYPE ID
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	LambdaListNE => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	{ => SPECIAL NOTATION
+
+	env => OBJECT ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	e => OBJECT ID
+
+	; => SPECIAL NOTATION
+
+	lam => OBJECT ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	l => OBJECT ID
+
+	; => SPECIAL NOTATION
+
+	num => OBJECT ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	n => OBJECT ID
+
+	; => SPECIAL NOTATION
+
+	rest => OBJECT ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	r => OBJECT ID
+
+	; => SPECIAL NOTATION
+
+	self => OBJECT ID
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	LambdaListRef => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	nextNum => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Int => TYPE ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	0 => INTEGER
+
+	; => SPECIAL NOTATION
+
+	l => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	LambdaList => TYPE ID
+
+	; => SPECIAL NOTATION
+
+	isNil => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	Bool => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	l => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	isNil => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	headE => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	VarList => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	l => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	headE => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	headC => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	Lambda => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	l => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	headC => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	headN => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	Int => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	l => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	headN => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	reset => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	SELF_TYPE => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	{ => SPECIAL NOTATION
+
+	nextNum => OBJECT ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	0 => INTEGER
+
+	; => SPECIAL NOTATION
+
+	l => OBJECT ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	new => KEYWORD
+
+	LambdaList => TYPE ID
+
+	; => SPECIAL NOTATION
+
+	self => OBJECT ID
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	add => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	env => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	VarList, => TYPE ID
+
+	c => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Lambda => TYPE ID
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	Int => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	{ => SPECIAL NOTATION
+
+	l => OBJECT ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	l => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	add => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	env, => OBJECT ID
+
+	c, => OBJECT ID
+
+	nextNum => OBJECT ID
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	nextNum => OBJECT ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	nextNum => OBJECT ID
+
+	+ => SPECIAL NOTATION
+
+	1 => INTEGER
+
+	; => SPECIAL NOTATION
+
+	nextNum => OBJECT ID
+
+	- => SPECIAL NOTATION
+
+	1 => INTEGER
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	removeHead => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	SELF_TYPE => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	{ => SPECIAL NOTATION
+
+	l => OBJECT ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	l => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	tail => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	self => OBJECT ID
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	inherits => KEYWORD
+
+	IO => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	print_self => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	SELF_TYPE => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	{ => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"\nError: Expr is pure virtual; can't print self\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	abort => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	self => OBJECT ID
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	beta => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	{ => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"\nError: Expr is pure virtual; can't beta-reduce\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	abort => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	self => OBJECT ID
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	substitute => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	x => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Variable, => TYPE ID
+
+	e => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	{ => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"\nError: Expr is pure virtual; can't substitute\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	abort => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	self => OBJECT ID
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	gen_code => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	env => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	VarList, => TYPE ID
+
+	closures => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	LambdaListRef => TYPE ID
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	SELF_TYPE => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	{ => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"\nError: Expr is pure virtual; can't gen_code\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	abort => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	self => OBJECT ID
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	Variable => TYPE ID
+
+	inherits => KEYWORD
+
+	Expr => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	name => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	String => TYPE ID
+
+	; => SPECIAL NOTATION
+
+	init => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	n => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	String => TYPE ID
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	Variable => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	{ => SPECIAL NOTATION
+
+	name => OBJECT ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	n => OBJECT ID
+
+	; => SPECIAL NOTATION
+
+	self => OBJECT ID
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	print_self => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	SELF_TYPE => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	name => OBJECT ID
+
+	) => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	beta => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	self => OBJECT ID
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	substitute => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	x => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Variable, => TYPE ID
+
+	e => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	if => KEYWORD
+
+	x => OBJECT ID
+
+	= => SPECIAL NOTATION
+
+	self => OBJECT ID
+
+	then => KEYWORD
+
+	e => OBJECT ID
+
+	else => KEYWORD
+
+	self => OBJECT ID
+
+	fi
+ => OBJECT ID
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	gen_code => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	env => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	VarList, => TYPE ID
+
+	closures => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	LambdaListRef => TYPE ID
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	SELF_TYPE => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	let => KEYWORD
+
+	cur_env => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	VarList => TYPE ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	env => OBJECT ID
+
+	in
+ => OBJECT ID
+
+	{ => SPECIAL NOTATION
+
+	while => KEYWORD
+
+	( => SPECIAL NOTATION
+
+	if => KEYWORD
+
+	cur_env => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	isNil => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	not => KEYWORD
+
+	( => SPECIAL NOTATION
+
+	cur_env => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	head => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	= => SPECIAL NOTATION
+
+	self => OBJECT ID
+
+	) => SPECIAL NOTATION
+
+	fi => KEYWORD
+
+	) => SPECIAL NOTATION
+
+	{ => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"get_parent()." => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	cur_env => OBJECT ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	cur_env => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	tail => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	pool => KEYWORD
+
+	; => SPECIAL NOTATION
+
+	if => KEYWORD
+
+	cur_env => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	isNil => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	then
+ => OBJECT ID
+
+	{ => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"Error:  free occurrence of " => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	print_self => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	abort => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	self => OBJECT ID
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	else
+ => OBJECT ID
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"get_x()" => STRING
+
+	) => SPECIAL NOTATION
+
+	fi => KEYWORD
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	Lambda => TYPE ID
+
+	inherits => KEYWORD
+
+	Expr => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	arg => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Variable => TYPE ID
+
+	; => SPECIAL NOTATION
+
+	body => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	; => SPECIAL NOTATION
+
+	init => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	a => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Variable, => TYPE ID
+
+	b => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	Lambda => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	{ => SPECIAL NOTATION
+
+	arg => OBJECT ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	a => OBJECT ID
+
+	; => SPECIAL NOTATION
+
+	body => OBJECT ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	b => OBJECT ID
+
+	; => SPECIAL NOTATION
+
+	self => OBJECT ID
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	print_self => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	SELF_TYPE => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	{ => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"\\" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	arg => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	print_self => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"." => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	body => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	print_self => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	self => OBJECT ID
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	beta => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	self => OBJECT ID
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	apply => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	actual => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	body => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	substitute => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	arg, => OBJECT ID
+
+	actual => OBJECT ID
+
+	) => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	substitute => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	x => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Variable, => TYPE ID
+
+	e => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	if => KEYWORD
+
+	x => OBJECT ID
+
+	= => SPECIAL NOTATION
+
+	arg => OBJECT ID
+
+	then
+ => OBJECT ID
+
+	self
+ => OBJECT ID
+
+	else
+ => OBJECT ID
+
+	let => KEYWORD
+
+	new_body => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	body => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	substitute => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	x, => OBJECT ID
+
+	e => OBJECT ID
+
+	) => SPECIAL NOTATION
+
+	new_lam => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Lambda => TYPE ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	new => KEYWORD
+
+	Lambda => TYPE ID
+
+	. => SPECIAL NOTATION
+
+	init => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	arg, => OBJECT ID
+
+	new_body => OBJECT ID
+
+	) => SPECIAL NOTATION
+
+	fi
+ => OBJECT ID
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	gen_code => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	env => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	VarList, => TYPE ID
+
+	closures => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	LambdaListRef => TYPE ID
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	SELF_TYPE => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	{ => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"((new Closure" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_int => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	closures => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	add => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	env, => OBJECT ID
+
+	self => OBJECT ID
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	").init(" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	if => KEYWORD
+
+	env => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	isNil => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	then
+ => OBJECT ID
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"new Closure))" => STRING
+
+	) => SPECIAL NOTATION
+
+	( => SPECIAL NOTATION
+
+	"self))" => STRING
+
+	) => SPECIAL NOTATION
+
+	fi => KEYWORD
+
+	; => SPECIAL NOTATION
+
+	self => OBJECT ID
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	gen_closure_code => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	n => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Int, => TYPE ID
+
+	env => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	closures => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	LambdaListRef => TYPE ID
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	SELF_TYPE => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	{ => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"class Closure" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_int => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	n => OBJECT ID
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	" inherits Closure {\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"  apply(y : EvalObject) : EvalObject {\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"    { out_string(\"Applying => STRING
+
+	closure => OBJECT ID
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"      x <- y;\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	body => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	gen_code => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	env => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	add => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	arg => OBJECT ID
+
+	) => SPECIAL NOTATION
+
+	closures => OBJECT ID
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	";}};\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"};\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	App => TYPE ID
+
+	inherits => KEYWORD
+
+	Expr => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	fun => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	; => SPECIAL NOTATION
+
+	arg => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	; => SPECIAL NOTATION
+
+	init => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	f => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Expr, => TYPE ID
+
+	a => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	App => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	{ => SPECIAL NOTATION
+
+	fun => OBJECT ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	f => OBJECT ID
+
+	; => SPECIAL NOTATION
+
+	arg => OBJECT ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	a => OBJECT ID
+
+	; => SPECIAL NOTATION
+
+	self => OBJECT ID
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	print_self => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	SELF_TYPE => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	{ => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"((" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	fun => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	print_self => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	")@(" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	arg => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	print_self => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"))" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	self => OBJECT ID
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	beta => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	case => KEYWORD
+
+	fun => OBJECT ID
+
+	of
+ => OBJECT ID
+
+	l => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Lambda => TYPE ID
+
+	= => SPECIAL NOTATION
+
+	> => SPECIAL NOTATION
+
+	l => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	apply => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	arg => OBJECT ID
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	Lazy => TYPE ID
+
+	evaluation
+ => OBJECT ID
+
+	e => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	= => SPECIAL NOTATION
+
+	> => SPECIAL NOTATION
+
+	new_fun => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	fun => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	beta => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	new_app => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	App => TYPE ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	new => KEYWORD
+
+	App => TYPE ID
+
+	new_app => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	init => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	new_fun, => OBJECT ID
+
+	arg => OBJECT ID
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	esac
+ => OBJECT ID
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	substitute => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	x => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Variable, => TYPE ID
+
+	e => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	let => KEYWORD
+
+	new_fun => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	fun => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	substitute => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	x, => OBJECT ID
+
+	e => OBJECT ID
+
+	) => SPECIAL NOTATION
+
+	new_arg => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	arg => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	substitute => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	x, => OBJECT ID
+
+	e => OBJECT ID
+
+	) => SPECIAL NOTATION
+
+	new_app => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	App => TYPE ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	new => KEYWORD
+
+	App => TYPE ID
+
+	in
+ => OBJECT ID
+
+	new_app => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	init => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	new_fun, => OBJECT ID
+
+	new_arg => OBJECT ID
+
+	) => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	gen_code => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	env => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	VarList, => TYPE ID
+
+	closures => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	LambdaListRef => TYPE ID
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	SELF_TYPE => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	{ => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"(let x : EvalObject <- " => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	fun => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	gen_code => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	env, => OBJECT ID
+
+	closures => OBJECT ID
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	",\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"     y : EvalObject <- " => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	arg => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	gen_code => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	env, => OBJECT ID
+
+	closures => OBJECT ID
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	" in\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"  case x of\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"    c : Closure => c.apply(y);\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"    o : Object => { abort(); new EvalObject; };\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"  esac)" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	Term => TYPE ID
+
+	inherits => KEYWORD
+
+	IO => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	var => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	x => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	String => TYPE ID
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	Variable => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	let => KEYWORD
+
+	v => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Variable => TYPE ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	new => KEYWORD
+
+	Variable => TYPE ID
+
+	in
+ => OBJECT ID
+
+	v => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	init => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	x => OBJECT ID
+
+	) => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	lam => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	x => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Variable, => TYPE ID
+
+	e => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	Lambda => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	let => KEYWORD
+
+	l => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Lambda => TYPE ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	new => KEYWORD
+
+	Lambda => TYPE ID
+
+	in
+ => OBJECT ID
+
+	l => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	init => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	x, => OBJECT ID
+
+	e => OBJECT ID
+
+	) => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	app => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	e1 => INTEGER
+
+	e1 => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Expr, => TYPE ID
+
+	e2 => INTEGER
+
+	e2 => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	App => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	let => KEYWORD
+
+	a => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	App => TYPE ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	new => KEYWORD
+
+	App => TYPE ID
+
+	in
+ => OBJECT ID
+
+	a => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	init => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	e1, => OBJECT ID
+
+	e2 => INTEGER
+
+	e2 => OBJECT ID
+
+	) => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	i => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	let => KEYWORD
+
+	x => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Variable => TYPE ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	var => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"x" => STRING
+
+	) => SPECIAL NOTATION
+
+	in
+ => OBJECT ID
+
+	lam => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	x,x => OBJECT ID
+
+	) => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	k => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	let => KEYWORD
+
+	x => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Variable => TYPE ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	var => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"x" => STRING
+
+	) => SPECIAL NOTATION
+
+	y => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Variable => TYPE ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	var => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"y" => STRING
+
+	) => SPECIAL NOTATION
+
+	in
+ => OBJECT ID
+
+	lam => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	x,lam => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	y,x => OBJECT ID
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	s => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	let => KEYWORD
+
+	x => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Variable => TYPE ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	var => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"x" => STRING
+
+	) => SPECIAL NOTATION
+
+	y => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Variable => TYPE ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	var => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"y" => STRING
+
+	) => SPECIAL NOTATION
+
+	z => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Variable => TYPE ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	var => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"z" => STRING
+
+	) => SPECIAL NOTATION
+
+	in
+ => OBJECT ID
+
+	lam => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	x,lam => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	y,lam => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	z,app => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	app => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	x,z => OBJECT ID
+
+	) => SPECIAL NOTATION
+
+	( => SPECIAL NOTATION
+
+	y,z => OBJECT ID
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	Main => TYPE ID
+
+	inherits => KEYWORD
+
+	Term => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	beta_reduce => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	e => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	{ => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"beta-reduce: " => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	e => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	print_self => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	let => KEYWORD
+
+	done => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Bool => TYPE ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	false,
+ => OBJECT ID
+
+	new_expr => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	in
+ => OBJECT ID
+
+	{ => SPECIAL NOTATION
+
+	while => KEYWORD
+
+	( => SPECIAL NOTATION
+
+	not => KEYWORD
+
+	done => OBJECT ID
+
+	) => SPECIAL NOTATION
+
+	{ => SPECIAL NOTATION
+
+	new_expr => OBJECT ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	e => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	beta => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	if => KEYWORD
+
+	( => SPECIAL NOTATION
+
+	new_expr => OBJECT ID
+
+	= => SPECIAL NOTATION
+
+	e => OBJECT ID
+
+	) => SPECIAL NOTATION
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	{ => SPECIAL NOTATION
+
+	e => OBJECT ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	new_expr => OBJECT ID
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	" =>\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	e => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	print_self => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	fi => KEYWORD
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	pool => KEYWORD
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	e => OBJECT ID
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	eval_class => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	SELF_TYPE => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	{ => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"class EvalObject inherits IO {\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"  eval() : EvalObject { { abort(); self; } };\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"};\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	closure_class => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	SELF_TYPE => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	{ => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"class Closure inherits EvalObject {\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"  parent : Closure;\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"  x : EvalObject;\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"  get_parent() : Closure { parent };\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"  get_x() : EvalObject { x };\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"  init(p : Closure) : Closure {{ parent <- p; self; }};\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"  apply(y : EvalObject) : EvalObject { { abort(); self; } };\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"};\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	gen_code => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	e => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Expr => TYPE ID
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	SELF_TYPE => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	let => KEYWORD
+
+	cl => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	LambdaListRef => TYPE ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	( => SPECIAL NOTATION
+
+	new => KEYWORD
+
+	LambdaListRef => TYPE ID
+
+	) => SPECIAL NOTATION
+
+	. => SPECIAL NOTATION
+
+	reset => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	in
+ => OBJECT ID
+
+	{ => SPECIAL NOTATION
+
+	( => SPECIAL NOTATION
+
+	"Generating code for " => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	. => SPECIAL NOTATION
+
+	print_self => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	( => SPECIAL NOTATION
+
+	"\n------------------cut here------------------\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	( => SPECIAL NOTATION
+
+	"(*Generated by lam.cl (Jeff Foster, March 2000)*)\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	( => SPECIAL NOTATION
+
+	"class Main {\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	( => SPECIAL NOTATION
+
+	"  main() : EvalObject {\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	. => SPECIAL NOTATION
+
+	gen_code => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	new => KEYWORD
+
+	VarList, => TYPE ID
+
+	cl => OBJECT ID
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	( => SPECIAL NOTATION
+
+	"\n};\n};\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	( => SPECIAL NOTATION
+
+	not => KEYWORD
+
+	( => SPECIAL NOTATION
+
+	cl => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	isNil => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	let => KEYWORD
+
+	e => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	VarList => TYPE ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	cl => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	headE => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	c => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Lambda => TYPE ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	cl => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	headC => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	n => OBJECT ID
+
+	: => SPECIAL NOTATION
+
+	Int => TYPE ID
+
+	< => SPECIAL NOTATION
+
+	- => SPECIAL NOTATION
+
+	cl => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	headN => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	{ => SPECIAL NOTATION
+
+	cl => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	removeHead => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	c => OBJECT ID
+
+	. => SPECIAL NOTATION
+
+	gen_closure_code => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	n, => OBJECT ID
+
+	e, => OBJECT ID
+
+	cl => OBJECT ID
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	( => SPECIAL NOTATION
+
+	"\n------------------cut here------------------\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	main => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	: => SPECIAL NOTATION
+
+	Int => TYPE ID
+
+	{ => SPECIAL NOTATION
+
+	{ => SPECIAL NOTATION
+
+	i => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	. => SPECIAL NOTATION
+
+	print_self => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	k => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	. => SPECIAL NOTATION
+
+	print_self => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	s => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	. => SPECIAL NOTATION
+
+	print_self => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	out_string => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	"\n" => STRING
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	beta_reduce => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	app => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	app => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	app => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	s => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	k => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	i => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	i => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	beta_reduce => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	app => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	app => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	k => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	gen_code => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	app => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	i => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	i => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	gen_code => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	app => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	app => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	app => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	s => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	k => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	i => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	i => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	gen_code => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	app => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	app => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	app => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	app => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	app => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	app => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	app => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	app => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	i => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	k => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	s => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	s => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	k => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	s => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	i => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	k => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	i => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	gen_code => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	app => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	app => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	i => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	app => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	k => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	s => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	app => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	k => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	app => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	s => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	s => OBJECT ID
+
+	( => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	) => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	0 => INTEGER
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+
+	} => SPECIAL NOTATION
+
+	; => SPECIAL NOTATION
+

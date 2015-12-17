@@ -1,0 +1,12 @@
+wikipedia.cl
+in	=>	OBJECT ID ?
+then	=>	OBJECT ID, KEYWORD
+out_string("The factorial of ").out_int(input); pulou .out_int
+factorial =>	OBJECT ID ?
+num => OBJECT ID ?
+
+TEVE QUE TIRAR OS COMENTÁRIOS
+
+
+cells.cl
+
