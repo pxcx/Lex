@@ -47,10 +47,20 @@ sub  trim{
 # LE O CODIGO FONTE
 sub lerSRC{
 	my $fp = abrir $_[0];
-	while (<$fp>) {
-		$code = $code . $_;
+	my $comment = 0;
+	while (<$fp>){
+		if (substr($_, 0, 2) ne "--"){
+			if(substr($_, 0, 2) eq "(*" || substr($_, 0, 2) eq "*)" || substr($_, length($_)-3, 2) eq "*)"){
+				$comment = $comment == 0 ? 1 : 0;
+			}
+
+			if ($comment == 0 && substr($_, 0, 2) ne "*)" && substr($_, length($_)-3, 2) ne "*)"){
+				$code = $code . $_;
+			}
+		}
 	}
-	
+	$code =~ s/\s/ /g;
+
 	return 1;
 }
 
