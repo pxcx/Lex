@@ -1,3 +1,9 @@
+(* FUCKING CO
+MENTARIO !@#$%$5 *)
+
+
+-- FUCKING COMENTARIO !@#$%$5 *)
+
 class Main inherits IO {
   main(): Object {{
     out_string("Enter an integer greater-than or equal-to 0: ");

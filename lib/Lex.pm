@@ -252,8 +252,8 @@ sub testaKeyword{
 
 sub init{
 	my $src = $_[0];
-	my $delFile = "delimitadores.cool";
-	my $keyFile = "keywords.cool";
+	my $delFile = "lang/delimitadores.cool";
+	my $keyFile = "lang/keywords.cool";
 
 	lerDelimitadores $delFile;
 	lerKeywords $keyFile;
