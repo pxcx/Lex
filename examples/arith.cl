@@ -4,7 +4,7 @@
  *  Tests the arithmetic operations and various other things
  *)
 
-class A {
+class A inherits IO {
 
    var : Int <- 0;
 

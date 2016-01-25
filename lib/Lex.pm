@@ -285,8 +285,9 @@ sub testaKeyword{
 # RETORNA O PROXIMO TOKEN DA LISTA
 sub nextToken{
 	if($parser < scalar @tokens){
-		return $tokens[$parser];
+		my $aux = $tokens[$parser];
 		$parser++;
+		return $aux;
 	}
 
 	return 0;
@@ -297,6 +298,14 @@ sub nextToken{
 sub follow{
 	if($parser < scalar @tokens){
 		return $tokens[$parser];
+	}
+
+	return 0;
+}
+
+sub current{
+	if($parser < scalar @tokens){
+		return $tokens[$parser - 1];
 	}
 
 	return 0;
