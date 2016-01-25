@@ -579,9 +579,9 @@ sub init {
 	my $token = Lex::nextToken();
 
 	if (regraA $token) {
-		print "SUCESSO!!!";
+		print "\n\nSUCESSO!!!";
 	} else {
-		print "FUDEU";
+		print "\n\nERROS FORAM ENCONTRADOS";
 	}
 
 }
