@@ -25,7 +25,7 @@ my @palavras = ();
 # ARRAY DE TOKENS
 my @tokens = ();
 # POSICAO DO PARSER
-my $parser = -1;
+my $parser = 0;
 
 ####################
 ##				  ##
@@ -280,6 +280,26 @@ sub testaKeyword{
 	else{
 		return 0;
 	}
+}
+
+# RETORNA O PROXIMO TOKEN DA LISTA
+sub nextToken{
+	if($parser < scalar @tokens){
+		return $tokens[$parser];
+		$parser++;
+	}
+
+	return 0;
+}
+
+
+# CONSULTA O FOLLOW DO TOKEN ATUAL
+sub follow{
+	if($parser < scalar @tokens){
+		return $tokens[$parser];
+	}
+
+	return 0;
 }
 
 ###################
