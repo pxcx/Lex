@@ -585,6 +585,12 @@ sub init {
 		print "\n\nERROS FORAM ENCONTRADOS";
 	}
 
+
+#	while($token){
+#		print $token->{"VALOR"}."\n";
+#		$token = Lex::nextToken();
+#	}
+
 }
 
 return 1;

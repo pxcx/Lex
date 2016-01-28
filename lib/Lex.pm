@@ -177,21 +177,22 @@ sub separa{
 						$i++;
 					}
 
-					my $aux = "";
-					$aux = $token if length $token > 0;
-					$aux = $letra if ($letra ne " " && $letra ne "\n" && $letra ne "\t");
-
-					if(length $aux > 0){
-
+					if(length $token > 0){
 						my %auxHash = (
-							"PALAVRA" => $aux,
+							"PALAVRA" => $token,
 							"LINHA" => $_->{"NRO"}
 						);
-
 						my $auxRef = \%auxHash;
 						push @palavras, $auxRef;
-
 						$token = "";
+					}
+					if($letra ne " " && $letra ne "\n" && $letra ne "\t"){
+						my %auxHash = (
+							"PALAVRA" => $letra,
+							"LINHA" => $_->{"NRO"}
+						);
+						my $auxRef = \%auxHash;
+						push @palavras, $auxRef;
 					}
 				}
 				else{
