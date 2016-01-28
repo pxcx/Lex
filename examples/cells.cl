@@ -2,7 +2,7 @@
    arrays are faked as Strings,
    X's respresent live cells, dots represent dead cells,
    no error checking is done *)
-class CellularAutomaton inherits IO {
+class CellularAutomaton inherits IO { (* CAUA BIBA *)
     population_map : String;
    
     init(map : String) : SELF_TYPE {

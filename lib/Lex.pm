@@ -19,9 +19,11 @@ my @delimitadores = ();
 # LISTA DOS KEYWORDS
 my @keywords = ();
 # STR DO CODIGO FONTE
-my $code = "";
+#my $code = "";
 # ARRAY DE PALAVRAS SEPARADAS
 my @palavras = ();
+# ARRAY DE PALAVRAS SEPARADAS
+my @linhas = ();
 # ARRAY DE TOKENS
 my @tokens = ();
 # POSICAO DO PARSER
@@ -48,33 +50,32 @@ sub  trim{
 
 # REMOVE OS COMENTARIOS DE UMA STRING !!! BUGADA !!!
 sub removeComentario{
-	my $charOpen = $_[0];
-	my $charClose = $_[1];
-	my $master = exists $_[2] ? $_[2] : $code;
-
 	my $open = 0;
-	my $str = "";
 	my $count = 0;
-	for(my $i=0; $i < (length($master)-1); $i++){
-		$open = 1 if(substr($master, $i, length($charOpen)) eq $charOpen);
-		$open = 0 if(substr($master, $i, length($charClose)) eq $charClose);
 
-		if($open == 1){
-			my $aux = substr($master, $i, 1);
-			$str = $str . $aux;
+	foreach(@linhas){
+		my $auxOpen = index $_->{"LINHA"}, "(*";
+		my $auxClose = index $_->{"LINHA"}, "*)";
+
+		if($auxOpen != -1 && $auxClose != -1){
+			$_->{"LINHA"} = substr $_->{"LINHA"}, 0, $auxOpen;
 		}
 		else{
-			if(length($str) > 0){
-				$str = quotemeta ($str . "*)");
-				$master =~ s/$str//g;
-				#print $str;
-				$str = "";
+			if($auxOpen != -1){
+				$open = 1;
+				$_->{"LINHA"} = substr $_->{"LINHA"}, $auxOpen, (length($_->{"LINHA"})-$auxOpen), "";
 			}
+
+			if($auxClose != -1){
+				$open = 0;
+				delete $linhas[$count];
+			}
+
+			delete $linhas[$count] if($open == 1);
 		}
 
+		$count++;
 	}
-
-	return $master;
 }
 
 
@@ -82,15 +83,24 @@ sub removeComentario{
 sub lerSRC{
 	my $fp = abrir $_[0];
 	my $comment = 0;
+	my $linha = 1;
 	while (<$fp>){
 		if (substr($_, 0, 2) ne "--"){
-			$code = $code . $_;
+			$_ =~ s/\s/ /g;
+
+			my %aux = (
+				"LINHA" => $_,
+				"NRO" => $linha,
+			);
+
+			my $linhaRef = \%aux;
+			push @linhas, $linhaRef;
 		}
+		$linha++;
 	}
 
-	$code = removeComentario "(*", "*)";
-	$code = removeComentario "(*", "*)";
-	$code =~ s/\s/ /g;
+	removeComentario;
+
 	return 1;
 }
 
@@ -149,25 +159,45 @@ sub separa{
 	my $token = "";
 	my $strOpen = 0;
 
-	for(my $i=0; $i< length $code; $i++){
-		my $letra = substr($code, $i, 1);
+	foreach(@linhas){
+		if($_){
+			my $code = $_->{"LINHA"};
+		
+			for(my $i=0; $i< length $code; $i++){
+				my $letra = substr($code, $i, 1);
 
-		if($letra eq "\""){
-			$strOpen = $strOpen == 0 ? 1 : 0;
-		}
+				if($letra eq "\""){
+					$strOpen = $strOpen == 0 ? 1 : 0;
+				}
 
 
-		if(ehDelimitador($letra) && $strOpen == 0){
-			if ( ($letra eq "<" && (substr($code, $i+1, 1) eq "-" || substr($code, $i+1, 1) eq "=")) || ($letra eq ">" && substr($code, $i+1, 1) eq "=") ){
-				$letra = $letra . substr($code, $i+1, 1);
-				$i++;
-			}
-			push @palavras, $token if length $token > 0;
-			push @palavras, $letra if ($letra ne " " && $letra ne "\n" && $letra ne "\t");
-			$token = "";
-		}
-		else{
-			$token = $token . $letra;
+				if(ehDelimitador($letra) && $strOpen == 0){
+					if ( ($letra eq "<" && (substr($code, $i+1, 1) eq "-" || substr($code, $i+1, 1) eq "=")) || ($letra eq ">" && substr($code, $i+1, 1) eq "=") ){
+						$letra = $letra . substr($code, $i+1, 1);
+						$i++;
+					}
+
+					my $aux = "";
+					$aux = $token if length $token > 0;
+					$aux = $letra if ($letra ne " " && $letra ne "\n" && $letra ne "\t");
+
+					if(length $aux > 0){
+
+						my %auxHash = (
+							"PALAVRA" => $aux,
+							"LINHA" => $_->{"NRO"}
+						);
+
+						my $auxRef = \%auxHash;
+						push @palavras, $auxRef;
+
+						$token = "";
+					}
+				}
+				else{
+					$token = $token . $letra;
+				}
+			} # fim do for interno
 		}
 	}
 	return @palavras;
@@ -175,13 +205,15 @@ sub separa{
 
 # TESTA SE UM TONKEN EH UM INTEGER
 sub testaInteger{
-	my $token = $_[0];
+	my $token = $_[0]->{"PALAVRA"};
+	my $linha = $_[0]->{"LINHA"};
 	
 	if($token =~ m/^[A-Za-z0-9]*\d+[A-Za-z0-9]*$/){
 
 		my %t = (
 				"VALOR" => $token,
 				"TIPO" => "INTEGER",
+				"LINHA" => $linha,
 			);
 		my $tokenRef = \%t;
 		push @tokens, $tokenRef;
@@ -193,13 +225,15 @@ sub testaInteger{
 
 # TESTA SE UM TONKEN EH UMA STRING
 sub testaString{
-	my $token = $_[0];
+	my $token = $_[0]->{"PALAVRA"};
+	my $linha = $_[0]->{"LINHA"};
 	
 	if($token =~ m/^".*$/){
 
 		my %t = (
 				"VALOR" => $token,
 				"TIPO" => "STRING",
+				"LINHA" => $linha,
 			);
 		my $tokenRef = \%t;
 		push @tokens, $tokenRef;
@@ -211,13 +245,15 @@ sub testaString{
 
 # TESTA SE UM TONKEN EH UM TYPE ID
 sub testaType{
-	my $token = $_[0];
+	my $token = $_[0]->{"PALAVRA"};
+	my $linha = $_[0]->{"LINHA"};
 	
 	if($token =~ m/^[A-Z].*$/){
 
 		my %t = (
 				"VALOR" => $token,
 				"TIPO" => "TYPE ID",
+				"LINHA" => $linha,
 			);
 		my $tokenRef = \%t;
 		push @tokens, $tokenRef;
@@ -230,13 +266,15 @@ sub testaType{
 
 # TESTA SE UM TONKEN EH UM OBJECT ID
 sub testaObject{
-	my $token = $_[0];
+	my $token = $_[0]->{"PALAVRA"};
+	my $linha = $_[0]->{"LINHA"};
 	
 	if($token =~ m/^[a-z].*$/ && !ehKeyword $token){
 
 		my %t = (
 				"VALOR" => $token,
 				"TIPO" => "OBJECT ID",
+				"LINHA" => $linha,
 			);
 		my $tokenRef = \%t;
 		push @tokens, $tokenRef;
@@ -248,13 +286,15 @@ sub testaObject{
 
 # TESTA SE UM TONKEN EH UM SPECIAL NOTATITION
 sub testaNotacao{
-	my $token = $_[0];
+	my $token = $_[0]->{"PALAVRA"};
+	my $linha = $_[0]->{"LINHA"};
 	
 	if(ehDelimitador $token){
 
 		my %t = (
 				"VALOR" => $token,
 				"TIPO" => "SPECIAL NOTATION",
+				"LINHA" => $linha,
 			);
 		my $tokenRef = \%t;
 		push @tokens, $tokenRef;
@@ -266,13 +306,15 @@ sub testaNotacao{
 
 # TESTA SE UM TONKEN EH UMA KEYWORD
 sub testaKeyword{
-	my $token = $_[0];
+	my $token = $_[0]->{"PALAVRA"};
+	my $linha = $_[0]->{"LINHA"};
 	
 	if(ehKeyword $token){
 
 		my %t = (
 				"VALOR" => $token,
 				"TIPO" => "KEYWORD",
+				"LINHA" => $linha,
 			);
 		my $tokenRef = \%t;
 		push @tokens, $tokenRef;

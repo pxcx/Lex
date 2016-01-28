@@ -560,7 +560,8 @@ sub regraA {
 
 sub erro {
 	my $token = $_[0]->{"VALOR"};
-	print "TOKEN INVALIDO = ".$token."\n";
+	my $linha = $_[0]->{"LINHA"};
+	print "O SEGUINTE TOKEN: ".$token." NAO EH ESPERADO NA LINHA ".$linha."\n";
 }
 
 sub regraFechamento {
@@ -575,7 +576,7 @@ sub regraFechamento {
 }
 
 sub init {
-	my @tokens  = Lex::init $_[0];
+	my @tokens = Lex::init $_[0];
 	my $token = Lex::nextToken();
 
 	if (regraA $token) {
