@@ -10,7 +10,20 @@ my $valor = "";
 my $tipo = "";
 my $follow = "";
 
-
+sub regraO {
+	$valor = $_[0]->{"VALOR"};
+	if ($valor ne "@") {
+		return regraFechamento();
+	} else {
+		if ($valor eq "@") {
+			my $token = Lex::nextToken();
+			if ($token->{"VALOR"} eq "TYPE ID") {
+				return 1;
+			}
+		}
+	}
+	return 0;
+}
 
 sub regraN {
 	$valor = $_[0]->{"VALOR"};
@@ -33,7 +46,7 @@ sub regraN {
 			return regraFechamento();
 		} 
 	}
-	erro(Lex::current());
+	return 0;
 }
 
 sub regraM {
@@ -50,7 +63,6 @@ sub regraM {
 			}
 		}
 	}
-		erro(Lex::current());
 		return 0;
 }
 
@@ -62,7 +74,6 @@ sub regraL {
 		}
 		return regraFechamento();
 	}
-	erro(Lex::current());
 	return 0;
 }
 
@@ -79,7 +90,6 @@ sub regraK {
 			}
 		}
 	}
-	erro(Lex::current());
 	return 0;
 }
 
@@ -92,11 +102,9 @@ sub regraJ {
 		} elsif ($follow->{"VALOR"} eq ")") {
 			return 1;
 		} else {
-			erro(Lex::current());
 			return 0;
 		}
 	} 
-	erro(Lex::current());
 	return 0;
 }
 
@@ -104,7 +112,6 @@ sub regraI {
 	if (regraF($_[0],1)) {
 		return regraFechamento();
 	}
-	erro(Lex::current());
 	return 0;
 }
 
@@ -117,7 +124,6 @@ sub regraH {
 	} else {
 		return regraFechamento();
 	}
-	erro(Lex::current());
 	return 0;
 }
 
@@ -136,15 +142,36 @@ sub regraG {
 			}
 		}
 	}
-	erro(Lex::current());
 	return 0;
 }
 
 sub regraF {
 	$valor = $_[0]->{"VALOR"};
 	$tipo = $_[0]->{"TIPO"};
-
+	$follow = Lex::follow();
 	switch ($valor) {
+		case {lc $follow->{"VALOR"} eq "@"} {
+			if (regraI()) {
+				if (regraO(Lex::nextToken())) {
+					my $token = Lex::nextToken();
+					if ($token->{"VALOR"} eq ".") {
+						$token = Lex::nextToken();
+						if ($token->{"TIPO"} eq "OBJECT ID") {
+							$token = Lex::nextToken();
+							if ($token->{"VALOR"} eq "(") {
+								if (regraJ(Lex::nextToken())) {
+									$token = Lex::nextToken();
+									if ($token->{"VALOR"} eq ")") {
+										return 1;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			return 0;
+		}
 		case {lc $valor eq "false"} { 
 			if (Lex::follow()->{"VALOR"} eq ")") {
 				return 1;
@@ -164,10 +191,7 @@ sub regraF {
 			return regraFechamento(); 
 		}
 		case {lc $tipo eq "integer"} { 
-			if (Lex::follow()->{"VALOR"} eq ")") {
-				return 1;
-			}
-			return regraFechamento(); 
+			return 1; 
 		}
 		case {$tipo eq "OBJECT ID"} {
 			$follow = Lex::follow();
@@ -181,7 +205,6 @@ sub regraF {
 							return regraFechamento();
 						}
 					}
-					erro(Lex::current());
 					return 0;
 					} else {
 						return regraFechamento();
@@ -193,7 +216,6 @@ sub regraF {
 				if(regraI($token)) {
 						return regraFechamento();
 				}
-				erro(Lex::current());
 				return 0;
 			}
 			else {
@@ -207,11 +229,9 @@ sub regraF {
 				if($token->{"VALOR"} eq ")") {
 					return regraFechamento();
 				} else {
-					erro(Lex::current());
 					return 0;
 				}
 			} else {
-				erro(Lex::current());
 				return 0;
 			}
 		}
@@ -220,7 +240,6 @@ sub regraF {
 			if(regraI($token)) {
 		    	return regraFechamento();
 		    } else {
-				erro(Lex::current());
 				return 0;
 			}
 		}
@@ -229,7 +248,6 @@ sub regraF {
 			if(regraI($token)) {
 				return regraFechamento();
 			} else {
-				erro(Lex::current());
 				return 0;
 			}
 		}
@@ -238,7 +256,6 @@ sub regraF {
 			if($token->{"TIPO"} eq "TYPE ID") {
 				return regraFechamento();
 			} else {
-				erro(Lex::current());
 				return 0;
 			}
 		}
@@ -248,7 +265,6 @@ sub regraF {
 					if($token->{"VALOR"} eq "}") {
 						return regraFechamento();
 					} else {
-						erro(Lex::current());
 						return 0;
 					}
 				}
@@ -258,7 +274,6 @@ sub regraF {
 			if(regraI($token)) {
 				return regraFechamento();
 			} else {
-				erro(Lex::current());
 				return 0;
 			}
 		}
@@ -272,19 +287,15 @@ sub regraF {
 							if(lc $token->{"VALOR"} eq "pool") {
 								return regraFechamento();
 							} else {
-								erro(Lex::current());
 								return 0;
 							}
 						} else {
-							erro(Lex::current());
 							return 0;
 						}
 					} else {
-						erro(Lex::current());
 						return 0;
 					}
 				} else {
-					erro(Lex::current());
 					return 0;
 				}
 		}
@@ -306,48 +317,43 @@ sub regraF {
 									if(lc $token->{"VALOR"} eq "fi"){
 										return regraFechamento();
 									} else {
-										erro(Lex::current());
 										return 0;
 									}
 								} else {
-									erro(Lex::current());
 									return 0;
 								}
 							}
 						} else {
-							erro(Lex::current());
 							return 0;
 						}
 					} else {
-						erro(Lex::current());
 						return 0;
 					} 
 				} else {
-					erro(Lex::current());
 					return 0;
 				} 
 		}
 		case {lc $valor eq "if"} {
-				if(regraI(Lex::nextToken())) {
-					my $token = Lex::nextToken();
-					if(lc $token->{"VALOR"} eq "then"){
-						if(regraI(Lex::nextToken())) {
-							my $token = Lex::nextToken();
-							if(lc $token->{"VALOR"} eq "fi"){
-								return regraFechamento();
-							}
-							elsif(lc $token->{"VALOR"} eq "else"){
-								if(regraI(Lex::nextToken())) {
-									my $token = Lex::nextToken();
-									if(lc $token->{"VALOR"} eq "fi"){
-										return regraFechamento();
-									}
+			if(regraI(Lex::nextToken())) {
+				my $token = Lex::nextToken();
+				if(lc $token->{"VALOR"} eq "then"){
+					if(regraI(Lex::nextToken())) {
+						my $token = Lex::nextToken();
+						if(lc $token->{"VALOR"} eq "fi"){
+							return regraFechamento();
+						}
+						elsif(lc $token->{"VALOR"} eq "else"){
+							if(regraI(Lex::nextToken())) {
+								my $token = Lex::nextToken();
+								if(lc $token->{"VALOR"} eq "fi"){
+									return regraFechamento();
 								}
 							}
 						}
 					}
 				}
-				print "ERRO AQUI F11"; return 0;
+			}
+			return 0;
 		}
 		case {lc $valor eq "case"} {
 				my $token = Lex::nextToken();
@@ -360,16 +366,13 @@ sub regraF {
 							if(lc $token->{"VALOR"} eq "esac") {
 								return regraFechamento();
 							} else {
-								erro(Lex::current());
 								return 0;
 							}
 						} else {
-							erro(Lex::current());
 							return 0;
 						} 
 					}
 				} else {
-					erro(Lex::current());
 					return 0;
 				}
 		}
@@ -388,28 +391,23 @@ sub regraF {
 									if(regraI($token)){
 										return regraFechamento();
 									} else {
-										erro(Lex::current());
 										return 0;
 									}
 								} else {
-									erro(Lex::current());
 									return 0;
 								}
 							} else {
-								erro(Lex::current());
 								return 0;
 							}
 						}
 					} else {
-						erro(Lex::current());
 						return 0;	
 					}
 				}
-				erro(Lex::current());
+
 		}
 		else {
 			if(defined $_[1]) {
-				erro(Lex::current());
 				return 0;
 			}
 			else {
@@ -431,15 +429,12 @@ sub regraF {
 							return 0;
 						}
 					} else {
-						erro(Lex::current());
 						return 0;
 					}
 				} else {
-					erro(Lex::current());
 					return 0;
 				}
 			}
-			erro(Lex::current());
 			return 0;
 		}
 	} # FIM DO SWITCH
@@ -455,68 +450,59 @@ sub regraE {
 			}
 		}
 	} else {
-		if (my $token->{"VALOR"} eq "<-") {
+		if ($valor eq "<-") {
 			if (regraF(Lex::nextToken())) {
-				return regraFechamento();
+				my $token = Lex::nextToken();
+				if ($token->{"VALOR"} eq ";") {
+					return 1;
+				}
 			}
 		}
 	}
-	erro(Lex::current());
 	return 0;
 }
 
 sub regraD {
 	$valor = $_[0]->{"VALOR"};
-	if ($valor eq "(") {
-		$follow = Lex::follow();
-		if($follow->{"VALOR"} ne ")") { 
-			if (regraH(Lex::nextToken())) {
-				my $token = Lex::nextToken();
-				if($token->{"VALOR"} eq ")") {
-					return regraFechamento();
+	
+		if ($valor eq "(") {
+			$follow = Lex::follow();
+			if($follow->{"VALOR"} ne ")") { 
+				if (regraH(Lex::nextToken())) {
+					my $token = Lex::nextToken();
+					if($token->{"VALOR"} eq ")") {
+						return regraFechamento();
+					} else {
+						return 0;
+					}
 				} else {
-					erro(Lex::current());
+					return 0;
 				}
 			} else {
-				erro(Lex::current());
+				Lex::nextToken();
+				return 1;
 			}
 		} else {
-			Lex::nextToken();
-			return 1;
+			return 0;
 		}
-	} else {
-		erro(Lex::current());
-	}
-	erro(Lex::current());
-	return 0;
+		return 0;
 }
 
 sub regraC {
 	$tipo = $_[0]->{"TIPO"};
 	if ($tipo eq "OBJECT ID") {
-		if (regraD(Lex::nextToken())) {
+		if (Lex::follow()->{"VALOR"} eq ":" || regraD(Lex::nextToken())) {
 			my $token = Lex::nextToken();
 			if ($token->{"VALOR"} eq ":") {
 				$token = Lex::nextToken();
 				if ($token->{"TIPO"} eq "TYPE ID") {
 					if (regraE(Lex::nextToken())) {
 						return 1;
-					} else {
-						erro(Lex::current());
 					}
-				} else {
-					erro(Lex::current());
 				}
-			} else {
-				erro(Lex::current());
 			}
-		} else {
-			erro(Lex::current());
 		}
-	} else {
-		erro(Lex::current());
 	}
-	erro(Lex::current());
 	return 0;
 }
 
@@ -530,7 +516,6 @@ sub regraB {
 	} elsif ($valor eq "{") {
 		return 1;
 	} else {
-		erro(Lex::current());
 		return 0;
 	}
 }
@@ -545,12 +530,9 @@ sub regraA {
 				$token = Lex::nextToken();
 				if ($token->{"VALOR"} eq "{") {
 					if (regraC(Lex::nextToken())) {
-						$token = Lex::nextToken();
-						if ($token->{"VALOR"} eq "}") {
-							return 1;
-						} 
+						return 1;
 					}
-				}
+				}		
 			}
 		} 
 	}
@@ -580,17 +562,10 @@ sub init {
 	my $token = Lex::nextToken();
 
 	if (regraA $token) {
-		print "\n\nSUCESSO!!!";
+		print "\n\nSUCESSO!!!\n";
 	} else {
-		print "\n\nERROS FORAM ENCONTRADOS";
+		print "\n\nERROS FORAM ENCONTRADOS\n";
 	}
-
-
-#	while($token){
-#		print $token->{"VALOR"}."\n";
-#		$token = Lex::nextToken();
-#	}
-
 }
 
 return 1;
