@@ -85,7 +85,7 @@ sub lerSRC{
 	my $comment = 0;
 	my $linha = 1;
 	while (<$fp>){
-		if (substr($_, 0, 2) ne "--"){
+		if (substr(trim($_), 0, 2) ne "--"){
 			$_ =~ s/\s/ /g;
 
 			my %aux = (

@@ -24,20 +24,27 @@
 
 
 class List {
-   -- Define operations on empty lists.
 
-   isNil() : Bool { true };
+   isNil() : Bool { 
+      true
+   };
 
    -- Since abort() has return type Object and head() has return type
    -- Int, we need to have an Int as the result of the method body,
    -- even though abort() never returns.
 
-   head()  : Int { { abort(); 0; } };
+   head()  : Int {
+      "45"
+      --{ abort(); 0; }
+   };
 
    -- As for head(), the self is just to make sure the return type of
    -- tail() is correct.
 
-   tail()  : List { { abort(); self; } };
+   tail()  : List {
+      30
+      -- { abort(); self; }
+   };
 
    -- When we cons and element onto the empty list we get a non-empty
    -- list. The (new Cons) expression creates a new list cell of class
@@ -46,8 +53,8 @@ class List {
    -- conforms to the return type List, because Cons is a subclass of
    -- List.
 
-   cons(i : Int) : List {
-      (new Cons).init(i, self)
+   cons(ia : Int) : List {
+      -- (new Cons).init(i, self)
    };
 
 };
@@ -69,22 +76,28 @@ class List {
 
 class Cons inherits List {
 
-   car : Int;	-- The element in this list cell
+   car : Int;	
+   -- The element in this list cell
 
-   cdr : List;	-- The rest of the list
+   cdr : List;
 
-   isNil() : Bool { false };
+   caua : Tchola;
+   -- The rest of the list
 
-   head()  : Int { car };
+   isNil(caua : Tchola, pedro : Bibax) : Bool { 
+      false
+   };
 
-   tail()  : List { cdr };
+   head()  : Int {
+      -- car
+   };
 
-   init(i : Int, rest : List) : List {
-      {
-	 car <- i;
-	 cdr <- rest;
-	 self;
-      }
+   tail()  : List {
+      -- cdr
+   };
+
+   init(ib : Int, rest : List, shit : Cagada) : List {
+      -- { car <- i; cdr <- rest; self; }
    };
 
 };
@@ -105,13 +118,13 @@ class Main inherits IO {
    -- the tail of the list, until the end of the list is reached.
 
    print_list(l : List) : Object {
-      if l.isNil() then out_string("\n")
-                   else {
-			   out_int(l.head());
-			   out_string(" ");
-			   print_list(l.tail());
-		        }
-      fi
+      -- if l.isNil() then out_string("\n")
+      --           else {
+		--   out_int(l.head());
+		--   out_string(" ");
+		--   print_list(l.tail());
+		--      }
+      --fi
    };
 
    -- Note how the dynamic dispatch mechanism is responsible to end
@@ -124,15 +137,15 @@ class Main inherits IO {
    -- returns true.
 
    main() : Object {
-      {
-	 mylist <- new List.cons(1).cons(2).cons(3).cons(4).cons(5);
-	 while (not mylist.isNil()) loop
-	    {
-	       print_list(mylist);
-	       mylist <- mylist.tail();
-	    }
-	 pool;
-      }
+    --   {
+	 --mylist <- new List.cons(1).cons(2).cons(3).cons(4).cons(5);
+	 --while (not mylist.isNil()) loop
+	 --   {
+	 --      print_list(mylist);
+	 --      mylist <- mylist.tail();
+	 --   }
+	 --pool;
+    --  }
    };
 
 };
